@@ -1,0 +1,30 @@
+{
+  "name": "balena-deploy-request",
+  "version": "0.1.0",
+  "description": "A simple script for generating deploy requests along with release notes",
+  "main": "src/index.js",
+  "bin": {
+    "balena-deploy-request": "bin/balena-deploy-request"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balena-io-modules/balena-deploy-request.git"
+  },
+  "keywords": [
+    "deploy",
+    "request",
+    "release",
+    "notes",
+    "balena",
+    "process"
+  ],
+  "author": "Thodoris Greasidis <thodoris@balena.io>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/balena-io-modules/balena-deploy-request/issues"
+  },
+  "homepage": "https://github.com/balena-io-modules/balena-deploy-request#readme"
+}
