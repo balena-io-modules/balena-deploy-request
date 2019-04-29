@@ -61,7 +61,7 @@ const rawChangelog = gitMultilineResults(
 	`diff -U0 ${prevVersionTag} CHANGELOG.md`,
 ).filter(line => line.match(/^[+-]/) && !line.match(/^--- a\/|[+]{3} b/));
 
-const CHANGELOG_VERSION_REGEX = /##\W+(\d+\.\d+\.\d+)/;
+const CHANGELOG_VERSION_REGEX = /#?#\W+v?(\d+\.\d+\.\d+)/;
 const newVersionMatchGroups =
 	rawChangelog[0].match(CHANGELOG_VERSION_REGEX) ||
 	rawChangelog[1].match(CHANGELOG_VERSION_REGEX);
