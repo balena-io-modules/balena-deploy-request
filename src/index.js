@@ -1,7 +1,13 @@
 const fs = require('fs');
 const { git, gitMultilineResults, toTitleCase } = require('./utils');
 
-let packageName = JSON.parse(fs.readFileSync('./package.json').toString()).name;
+let packageName;
+try {
+	packageName = JSON.parse(fs.readFileSync('./package.json').toString()).name;
+} catch {
+	console.error('No `package.json` found, aborting!');
+	process.exit(1);
+};
 
 const packageNameAliases = {
 	'balena.io': 'resin-api',
@@ -19,6 +25,10 @@ const moduleName =
 
 function getLatestProdInfo() {
 	const tags = gitMultilineResults('tag -l --sort=refname production-*');
+	if (tags.length === 0) {
+		console.error('No `production*` tags found, cannot compute changelog');
+		process.exit(1);
+	}
 	let latestProdTag = tags[tags.length - 1];
 
 	// if the current commit has the production tag skip it
