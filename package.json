@@ -7,7 +7,9 @@
     "balena-deploy-request": "bin/balena-deploy-request"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "prettify": "prettier --write \"src/**/*.js\"",
+    "catch-unprettified": "npm run prettify -- --check",
+    "test": "npm run catch-unprettified"
   },
   "repository": {
     "type": "git",
@@ -26,5 +28,10 @@
   "bugs": {
     "url": "https://github.com/balena-io-modules/balena-deploy-request/issues"
   },
-  "homepage": "https://github.com/balena-io-modules/balena-deploy-request#readme"
+  "homepage": "https://github.com/balena-io-modules/balena-deploy-request#readme",
+  "devDependencies": {
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "prettier": "^1.17.1"
+  }
 }

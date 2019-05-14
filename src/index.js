@@ -7,7 +7,7 @@ try {
 } catch (e) {
 	console.error('No `package.json` found, aborting!');
 	process.exit(1);
-};
+}
 
 const packageNameAliases = {
 	'balena.io': 'resin-api',
