@@ -1,6 +1,6 @@
 {
   "name": "balena-deploy-request",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A simple script for generating deploy requests along with release notes",
   "main": "src/index.js",
   "bin": {
