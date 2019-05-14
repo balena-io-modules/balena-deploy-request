@@ -4,7 +4,7 @@ const { git, gitMultilineResults, toTitleCase } = require('./utils');
 let packageName;
 try {
 	packageName = JSON.parse(fs.readFileSync('./package.json').toString()).name;
-} catch {
+} catch (e) {
 	console.error('No `package.json` found, aborting!');
 	process.exit(1);
 };
