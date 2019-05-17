@@ -23,6 +23,31 @@ const moduleName =
 	moduleAliases[packageName] ||
 	packageName.replace('resin-', '').replace('balena-', '');
 
+function getCodeowners() {
+	// git ls-files '*CODEOWNERS'
+	// * @user1 @user2
+	let codeownerSet = new Set();
+	const codeownersFiles = gitMultilineResults('ls-files *CODEOWNERS');
+	codeownersFiles.forEach(function(file) {
+		codeownerLine = fs
+			.readFileSync(file)
+			.toString()
+			.toLowerCase()
+			.split('\n')
+			.filter(n => n && !n.startsWith('#'));
+		codeownerLine.forEach(function(owner) {
+			owner
+				.split(/\s+/)
+				.slice(1)
+				.filter(n => n)
+				.forEach(function(user) {
+					codeownerSet.add(user);
+				});
+		});
+	});
+	return Array.from(codeownerSet);
+}
+
 function getLatestProdInfo() {
 	const tags = gitMultilineResults('tag -l --sort=refname production-*');
 	if (tags.length === 0) {
@@ -83,6 +108,12 @@ const date = new Date().toISOString().match(/\d+-\d+-\d+/)[0];
 
 const changelog = rawChangelog.map(l => l.replace(/^\+/, ''));
 
+const codeowners = getCodeowners();
+let ccList = [''];
+if (codeowners.length) {
+	ccList = ['codeowners:'].concat(codeowners);
+}
+
 const notableChanges = changelog
 	.filter(l => l.match(/^\* /))
 	.map(l => l.replace(/ \[.+\]$/, ''));
@@ -91,7 +122,8 @@ const result = [
 	'================================ Deploy request ================================',
 	'',
 	`#devops please deploy #${packageName} ${newVersion} to production`,
-	`cc: <everyone that's in the changelog and/or should know about this>`,
+	ccList.join(' '),
+	'cc: <everyone else that should know about this change>',
 	'',
 	'================================ Release notes =================================',
 	'',
