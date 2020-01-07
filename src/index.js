@@ -10,7 +10,7 @@ try {
 }
 
 const packageNameAliases = {
-	'balena.io': 'resin-api',
+	'balena.io': 'balena-api',
 };
 
 packageName = packageNameAliases[packageName] || packageName;
