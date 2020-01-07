@@ -123,7 +123,6 @@ const result = [
 	'',
 	'================================ Release notes =================================',
 	'',
-	`#release-notes #${packageName}`,
 	`# ${toTitleCase(packageName)} release notes ${date}`,
 	'',
 	`The ${moduleName} has been updated from ${oldVersion} to ${newVersion}`,
