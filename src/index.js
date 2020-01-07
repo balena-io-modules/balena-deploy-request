@@ -109,10 +109,6 @@ const date = new Date().toISOString().match(/\d+-\d+-\d+/)[0];
 const changelog = rawChangelog.map(l => l.replace(/^\+/, ''));
 
 const codeowners = getCodeowners();
-let ccList = [''];
-if (codeowners.length) {
-	ccList = ['codeowners:'].concat(codeowners);
-}
 
 const notableChanges = changelog
 	.filter(l => l.match(/^\* /))
@@ -122,8 +118,8 @@ const result = [
 	'================================ Deploy request ================================',
 	'',
 	`#devops please deploy #${packageName} ${newVersion} to production`,
-	`@@devops`,
-	`CODEOWNERS: ${ccList.join(' ')}`,
+	'@@devops',
+	`CODEOWNERS: ${codeowners.join(' ')}`,
 	'',
 	'================================ Release notes =================================',
 	'',
