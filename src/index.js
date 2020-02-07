@@ -122,7 +122,7 @@ const result = [
 	`CODEOWNERS: ${codeowners.join(' ')}`,
 	'',
 	'================================ Release notes =================================',
-	'',
+	'```',
 	`# ${toTitleCase(packageName)} release notes ${date}`,
 	'',
 	`The ${moduleName} has been updated from ${oldVersion} to ${newVersion}`,
@@ -132,7 +132,7 @@ const result = [
 	...notableChanges,
 	'',
 	...changelog,
-	'',
+	'```',
 	'================================================================================',
 ];
 
