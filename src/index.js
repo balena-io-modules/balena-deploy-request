@@ -110,9 +110,7 @@ const changelog = rawChangelog.map(l => l.replace(/^\+/, ''));
 
 const codeowners = getCodeowners();
 
-const notableChanges = changelog
-	.filter(l => l.match(/^\* /))
-	.map(l => l.replace(/ \[.+\]$/, ''));
+const notableChanges = changelog.filter(l => l.match(/^\* /));
 
 const result = [
 	'================================ Deploy request ================================',
