@@ -1,12 +1,16 @@
 const fs = require('fs');
 const { git, gitMultilineResults, toTitleCase } = require('./utils');
 
-let packageName;
-try {
-	packageName = JSON.parse(fs.readFileSync('./package.json').toString()).name;
-} catch (e) {
-	console.error('No `package.json` found, aborting!');
-	process.exit(1);
+let packageName = process.argv[2];
+if (!packageName) {
+	try {
+		packageName = JSON.parse(fs.readFileSync('./package.json').toString()).name;
+	} catch (e) {
+		console.error(
+			`No 'package.json' found, you can manually specify a package name as the first argument`,
+		);
+		process.exit(1);
+	}
 }
 
 const packageNameAliases = {
