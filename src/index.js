@@ -87,7 +87,21 @@ const date = new Date().toISOString().match(/\d+-\d+-\d+/)[0];
 
 const changelog = rawChangelog.map(l => l.replace(/^\+/, ''));
 
-const notableChanges = changelog.filter(l => l.match(/^\* /));
+const notableChanges = [];
+for (const l of changelog) {
+	// Pick up to 1 level of nested changes
+	const match = l.match(
+		/^((?<nesting>[>]{1,2}) )?(\*|<summary>) (?<change>\w[^<]+)( <\/summary>)?$/,
+	);
+	if (
+		match != null &&
+		!match.groups.change.startsWith('Update dependencies [')
+	) {
+		notableChanges.push(
+			`* ${match.groups.nesting ?? ''}${match.groups.change}`,
+		);
+	}
+}
 
 const result = [
 	'================================ Deploy request ================================',
