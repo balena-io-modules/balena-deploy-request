@@ -1,4 +1,15 @@
 - commits:
+    - subject: Add nested changelog entries to the proposed notable changes
+      hash: 9e55bbf2170308b11872060089ad6e7e668ee444
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Thodoris Greasidis
+  version: 0.9.0
+  title: ""
+  date: 2023-06-16T14:55:57.094Z
+- commits:
     - subject: Replace balenaCI with flowzone
       hash: d42ed86c90fa770f03b9bb683202757ea19780a7
       body: ""
