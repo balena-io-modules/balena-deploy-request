@@ -1,0 +1,155 @@
+- commits:
+    - subject: Replace balenaCI with flowzone
+      hash: d42ed86c90fa770f03b9bb683202757ea19780a7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+  version: 0.8.3
+  title: ""
+  date: 2023-06-16T14:18:52.623Z
+- version: 0.8.2
+  date: 2022-04-21T15:23:07Z
+  commits:
+    - hash: 3ab5faddab1da937fa8f6f9beebf664f63b16b8c
+      author: Pagan Gazzard
+      footers:
+        change-type: patch
+      subject: Allow specifying a package name for when there is no package.json
+      body: ""
+- version: 0.8.1
+  date: 2021-07-06T14:25:39Z
+  commits:
+    - hash: f08bf84f2fd9f17f1242e7e056330b953113cf98
+      author: Page-
+      footers:
+        change-type: patch
+      subject: Remove CODEOWNERS
+      body: ""
+- version: 0.8.0
+  date: 2020-03-30T14:46:01Z
+  commits:
+    - hash: 7c4e9aa5dcb4bf503e427dc6c2b22ca8ec4da05a
+      author: Thodoris Greasidis
+      footers:
+        change-type: minor
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      subject: Add the authors to the notable changes section
+      body: ""
+- version: 0.7.0
+  date: 2020-02-07T17:44:42Z
+  commits:
+    - hash: 60ade4c9e1b7563308c69bd24172eac4aa815198
+      author: Thodoris Greasidis
+      footers:
+        change-type: minor
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      subject: Wrap the release notes with backticks, to help copying from FD
+      body: ""
+- version: 0.6.0
+  date: 2020-01-08T17:34:46Z
+  commits:
+    - hash: 0f3ac751bf58c49eb9ebd027b46df2ee73ebd3a8
+      author: Stevche Radevski
+      footers:
+        change-type: minor
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      subject: Update the deploy request template to ping devops
+      body: ""
+    - hash: 0517e5429f75c8b9f9118f06169b845b1b0d86fe
+      author: Thodoris Greasidis
+      footers:
+        see: https://github.com/balena-io/process/blob/v0.5.8/process/deployment-environment-and-procedures.md
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      subject: Update the deploy request according to process v0.5.8
+      body: ""
+    - hash: b0ac6fb2e42c077802e5f846f15562b3d30f8512
+      author: Thodoris Greasidis
+      footers:
+        change-type: minor
+        see: https://github.com/balena-io/process/blob/v0.5.8/process/deployment-environment-and-procedures.md
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      subject: "Remove the #release-notes line according to process v0.5.8"
+      body: ""
+- version: 0.5.0
+  date: 2020-01-07T15:37:05Z
+  commits:
+    - hash: df52908ce7bf5489153dce2ed488b0714e92107e
+      author: Thodoris Greasidis
+      footers:
+        change-type: minor
+      subject: Update the api package json name alias to balena-api
+      body: ""
+- version: 0.4.0
+  date: 2019-06-10T20:50:55Z
+  commits:
+    - hash: 20b308effd5fc0865abec60c2cc6ee17927703c7
+      author: Matthew McGinn
+      footers:
+        connects-to: "#10"
+        change-type: minor
+        signed-off-by: Matthew McGinn <matthew@balena.io>
+      subject: "ccList: autogenerate part of cclist from any committed CODEOWNERS files"
+      body: ""
+- version: 0.3.2
+  date: 2019-05-14T12:21:50Z
+  commits:
+    - hash: a75f568550eee352fae3298e26d21227007e126e
+      author: Thodoris Greasidis
+      footers:
+        resolves: "#8"
+        change-type: patch
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      subject: Use prettier for code formatting
+      body: ""
+- version: 0.3.1
+  date: 2019-05-14T12:07:11Z
+  commits:
+    - hash: 23de40a2a8ddb58d2f75524ed505fb0aba5338ea
+      author: Thodoris Greasidis
+      footers:
+        resolves: "#6"
+        change-type: patch
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      subject: Fix to work on node 8
+      body: ""
+- version: 0.3.0
+  date: 2019-05-14T11:42:55Z
+  commits:
+    - hash: 3bb7439d9a4e20ae4e2c7cb835f69a86ca09a3ee
+      author: Matthew McGinn
+      footers:
+        change-type: minor
+        signed-off-by: Matthew McGinn <matthew@balena.io>
+      subject: "regex: update regex for possible # and v in version string"
+      body: ""
+- version: 0.2.0
+  date: 2019-05-10T15:55:50Z
+  commits:
+    - hash: 61037f2166ada600f07233994853126612dddd5d
+      author: Matthew McGinn
+      footers:
+        change-type: minor
+        signed-off-by: Matthew McGinn <matthew@balena.io>
+      subject: "errors: better handle some common repository issues"
+      body: ""
+- version: 0.1.1
+  date: 2019-04-19T12:52:47Z
+  commits:
+    - hash: 24bc82c2f3b0c8128f47107a11df643470e459da
+      author: Thodoris Greasidis
+      footers:
+        change-type: patch
+      subject: Suggest running with npx & fix a typo
+      body: ""
+- version: 0.1.0
+  date: 2019-01-24T09:23:01Z
+  commits:
+    - hash: 5b84d101e447b28cad8f120176ff2a6d6d8faf85
+      author: Thodoris Greasidis
+      footers:
+        change-type: minor
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      subject: Initial code PR
+      body: ""
