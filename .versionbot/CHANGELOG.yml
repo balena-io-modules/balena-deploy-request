@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependency lint-staged to v15
+      hash: 5e2813daf0db446a20dc1d2b9a1d0726f8e24593
+      body: |
+        Update lint-staged from 8.2.1 to 15.2.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+  version: 0.9.3
+  title: ""
+  date: 2024-03-19T21:47:05.612Z
+- commits:
     - subject: Update dependency husky to v9
       hash: a3230188793becc39969f81d1faf05acf764c30a
       body: |
