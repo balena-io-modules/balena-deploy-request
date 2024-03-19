@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependency prettier to v3
+      hash: 7f7def9c5eab1602b586c17cadf85df75bbeff71
+      body: |
+        Update prettier from 1.19.1 to 3.1.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+  version: 0.9.1
+  title: ""
+  date: 2024-03-19T20:28:20.829Z
+- commits:
     - subject: Add nested changelog entries to the proposed notable changes
       hash: 9e55bbf2170308b11872060089ad6e7e668ee444
       body: ""
