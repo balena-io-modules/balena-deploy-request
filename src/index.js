@@ -104,13 +104,6 @@ for (const l of changelog) {
 }
 
 const result = [
-	'================================ Deploy request ================================',
-	'',
-	`#devops please deploy #${packageName} ${newVersion} to production`,
-	'@@devops',
-	'',
-	'================================ Release notes =================================',
-	'```',
 	`# ${toTitleCase(packageName)} release-notes ${date}`,
 	'',
 	`The ${moduleName} has been updated from ${oldVersion} to ${newVersion}`,
@@ -120,8 +113,6 @@ const result = [
 	...notableChanges,
 	'',
 	...changelog,
-	'```',
-	'================================================================================',
 ];
 
 console.log(result.join('\n'));
