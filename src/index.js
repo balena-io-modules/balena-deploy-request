@@ -104,7 +104,7 @@ for (const l of changelog) {
 }
 
 const result = [
-	`# ${toTitleCase(packageName)} release-notes ${date}`,
+	`# ${toTitleCase(packageName)} #release-notes ${date}`,
 	'',
 	`The ${moduleName} has been updated from ${oldVersion} to ${newVersion}`,
 	'',
