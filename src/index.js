@@ -109,10 +109,13 @@ const result = [
 	`The ${moduleName} has been updated from ${oldVersion} to ${newVersion}`,
 	'',
 	'Notable changes',
-	'* <only keep the important and rephrase>',
+	'* [only keep the important and rephrase]',
 	...notableChanges,
 	'',
+	'<details><summary>Expand changelog</summary>',
+	'',
 	...changelog,
+	'</details>',
 ];
 
 console.log(result.join('\n'));
