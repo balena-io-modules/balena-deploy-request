@@ -1,4 +1,14 @@
 - commits:
+    - subject: we do our own deploys now
+      hash: 428c10d57567788d78831c5cebd077aed2076763
+      body: ""
+      footer:
+        change-type: patch
+      author: Anton Belodedenko
+  version: 0.9.4
+  title: ""
+  date: 2024-04-16T13:22:51.767Z
+- commits:
     - subject: Update dependency lint-staged to v15
       hash: 5e2813daf0db446a20dc1d2b9a1d0726f8e24593
       body: |
