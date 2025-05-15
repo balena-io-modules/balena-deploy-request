@@ -1,4 +1,22 @@
 - commits:
+    - subject: Format with prettify
+      hash: fc40307b1450be7555be22f5b182348d0160d073
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+    - subject: Fix husky and lint-staged configs
+      hash: 146a5bdaaf7555901f81077db285faff5268d4e6
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+  version: 0.9.5
+  title: ""
+  date: 2025-05-15T07:39:09.396Z
+- commits:
     - subject: we do our own deploys now
       hash: 428c10d57567788d78831c5cebd077aed2076763
       body: ""
