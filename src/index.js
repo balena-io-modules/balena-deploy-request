@@ -45,12 +45,12 @@ function getLatestProdInfo() {
 
 	let latestProdVersionTag = gitMultilineResults(
 		`log ${latestProdTag} --skip 0 -n 1 --pretty=tformat:%s`,
-	).filter(line => line.match(/^v/))[0];
+	).filter((line) => line.match(/^v/))[0];
 	if (!latestProdVersionTag) {
 		// for VB v1 tags
 		latestProdVersionTag = gitMultilineResults(
 			`log ${latestProdTag} --skip 1 -n 1 --pretty=tformat:%s`,
-		).filter(line => line.match(/^v/))[0];
+		).filter((line) => line.match(/^v/))[0];
 	}
 	return {
 		latestProdTag,
@@ -63,7 +63,7 @@ const prevVersionTag = latestProdInfo.latestProdVersionTag;
 
 const rawChangelog = gitMultilineResults(
 	`diff -U0 ${prevVersionTag} CHANGELOG.md`,
-).filter(line => line.match(/^[+-]/) && !line.match(/^--- a\/|[+]{3} b/));
+).filter((line) => line.match(/^[+-]/) && !line.match(/^--- a\/|[+]{3} b/));
 
 const CHANGELOG_VERSION_REGEX = /#?#\W+v?(\d+\.\d+\.\d+)/;
 const newVersionMatchGroups =
@@ -85,7 +85,7 @@ const newVersion = `v${newVersionMatchGroups[1]}`;
 
 const date = new Date().toISOString().match(/\d+-\d+-\d+/)[0];
 
-const changelog = rawChangelog.map(l => l.replace(/^\+/, ''));
+const changelog = rawChangelog.map((l) => l.replace(/^\+/, ''));
 
 const notableChanges = [];
 for (const l of changelog) {

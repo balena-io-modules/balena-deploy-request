@@ -23,11 +23,11 @@ exports.gitMultilineResults = function gitMultilineResults(args) {
 	return exports
 		.git(args)
 		.split('\n')
-		.filter(line => !!line);
+		.filter((line) => !!line);
 };
 
 exports.toTitleCase = function toTitleCase(str) {
-	return str.replace(/\w\S*/g, function(txt) {
+	return str.replace(/\w\S*/g, function (txt) {
 		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
 	});
 };
