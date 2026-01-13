@@ -1,4 +1,22 @@
 - commits:
+    - subject: Update the release notes message
+      hash: eeb2b3923d0b973c319545cae5e16f6920184b55
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+    - subject: Add the --since parameter
+      hash: cc4d05056c38f86319f46e35dcc9e8561e28a836
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Thodoris Greasidis
+  version: 0.10.0
+  title: ""
+  date: 2026-01-13T14:18:03.969Z
+- commits:
     - subject: Update dependency lint-staged to v16
       hash: 7a76bcdacf0dda77e2d37785ef64c18ff5e53133
       body: |
