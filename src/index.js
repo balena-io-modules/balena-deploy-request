@@ -1,7 +1,19 @@
 const fs = require('fs');
 const { git, gitMultilineResults, toTitleCase } = require('./utils');
 
-let packageName = process.argv[2];
+const argvWoFlags = [];
+const flags = {};
+
+for (let i = 2; i < process.argv.length; i++) {
+	if (typeof process.argv[i] === 'string' && process.argv[i].startsWith('--')) {
+		flags[process.argv[i].slice(2)] = process.argv[i + 1];
+		i++;
+	} else {
+		argvWoFlags.push(process.argv[i]);
+	}
+}
+
+let packageName = argvWoFlags[0];
 if (!packageName) {
 	try {
 		packageName = JSON.parse(fs.readFileSync('./package.json').toString()).name;
@@ -58,8 +70,7 @@ function getLatestProdInfo() {
 	};
 }
 
-const latestProdInfo = getLatestProdInfo();
-const prevVersionTag = latestProdInfo.latestProdVersionTag;
+const prevVersionTag = flags.since || getLatestProdInfo().latestProdVersionTag;
 
 const rawChangelog = gitMultilineResults(
 	`diff -U0 ${prevVersionTag} CHANGELOG.md`,
@@ -91,7 +102,7 @@ const notableChanges = [];
 for (const l of changelog) {
 	// Pick up to 1 level of nested changes
 	const match = l.match(
-		/^((?<nesting>[>]{1,2}) )?(\*|<summary>) (?<change>\w[^<]+)( <\/summary>)?$/,
+		/^((?<nesting>[>]{1,2}) )?(\*|<summary>) (?<change>[^<]+)( <\/summary>)?$/,
 	);
 	if (
 		match != null &&
@@ -104,9 +115,7 @@ for (const l of changelog) {
 }
 
 const result = [
-	`# ${toTitleCase(packageName)} #release-notes ${date}`,
-	'',
-	`The ${moduleName} has been updated from ${oldVersion} to ${newVersion}`,
+	`#release-notes Update balena-io/${packageName} to ${newVersion}`,
 	'',
 	'Notable changes',
 	'* [only keep the important and rephrase]',
