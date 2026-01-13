@@ -102,7 +102,7 @@ const notableChanges = [];
 for (const l of changelog) {
 	// Pick up to 1 level of nested changes
 	const match = l.match(
-		/^((?<nesting>[>]{1,2}) )?(\*|<summary>) (?<change>\w[^<]+)( <\/summary>)?$/,
+		/^((?<nesting>[>]{1,2}) )?(\*|<summary>) (?<change>[^<]+)( <\/summary>)?$/,
 	);
 	if (
 		match != null &&
@@ -115,9 +115,7 @@ for (const l of changelog) {
 }
 
 const result = [
-	`# ${toTitleCase(packageName)} #release-notes ${date}`,
-	'',
-	`The ${moduleName} has been updated from ${oldVersion} to ${newVersion}`,
+	`#release-notes Update balena-io/${packageName} to ${newVersion}`,
 	'',
 	'Notable changes',
 	'* [only keep the important and rephrase]',
