@@ -1,7 +1,19 @@
 const fs = require('fs');
 const { git, gitMultilineResults, toTitleCase } = require('./utils');
 
-let packageName = process.argv[2];
+const argvWoFlags = [];
+const flags = {};
+
+for (let i = 2; i < process.argv.length; i++) {
+	if (typeof process.argv[i] === 'string' && process.argv[i].startsWith('--')) {
+		flags[process.argv[i].slice(2)] = process.argv[i + 1];
+		i++;
+	} else {
+		argvWoFlags.push(process.argv[i]);
+	}
+}
+
+let packageName = argvWoFlags[0];
 if (!packageName) {
 	try {
 		packageName = JSON.parse(fs.readFileSync('./package.json').toString()).name;
@@ -58,8 +70,7 @@ function getLatestProdInfo() {
 	};
 }
 
-const latestProdInfo = getLatestProdInfo();
-const prevVersionTag = latestProdInfo.latestProdVersionTag;
+const prevVersionTag = flags.since || getLatestProdInfo().latestProdVersionTag;
 
 const rawChangelog = gitMultilineResults(
 	`diff -U0 ${prevVersionTag} CHANGELOG.md`,
