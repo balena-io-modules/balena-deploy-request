@@ -31,9 +31,9 @@
   },
   "homepage": "https://github.com/balena-io-modules/balena-deploy-request#readme",
   "devDependencies": {
-    "husky": "^9.0.0",
-    "lint-staged": "^16.0.0",
-    "prettier": "^3.0.0"
+    "husky": "9.1.7",
+    "lint-staged": "16.4.0",
+    "prettier": "3.8.3"
   },
   "versionist": {
     "publishedAt": "2026-03-26T17:39:29.186Z"
