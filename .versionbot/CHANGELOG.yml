@@ -1,4 +1,16 @@
 - commits:
+    - subject: Pin dependencies
+      hash: 359d8639acb8e31862059f68c087152a2fad2d2b
+      body: |
+        Update husky
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+  version: 0.10.17
+  title: ""
+  date: 2026-05-16T00:08:19.028Z
+- commits:
     - subject: Revert flowzone pinning to master
       hash: b022321f1cd0a5d7d33eee846713a9441d4257a8
       body: ""
