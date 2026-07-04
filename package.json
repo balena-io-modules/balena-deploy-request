@@ -33,7 +33,7 @@
   "devDependencies": {
     "husky": "9.1.7",
     "lint-staged": "17.0.8",
-    "prettier": "3.8.4"
+    "prettier": "3.9.4"
   },
   "versionist": {
     "publishedAt": "2026-06-27T00:13:53.527Z"
