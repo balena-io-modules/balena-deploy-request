@@ -1,6 +1,6 @@
 {
   "name": "balena-deploy-request",
-  "version": "0.10.22",
+  "version": "0.10.23",
   "description": "A simple script for generating deploy requests along with release notes",
   "main": "src/index.js",
   "bin": {
@@ -36,6 +36,6 @@
     "prettier": "3.9.5"
   },
   "versionist": {
-    "publishedAt": "2026-07-04T00:13:02.892Z"
+    "publishedAt": "2026-07-12T17:10:40.819Z"
   }
 }
