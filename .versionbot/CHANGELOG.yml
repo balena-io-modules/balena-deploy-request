@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependency lint-staged to v17.2.0
+      hash: ac379809746ab8c753af672d9ef370e3fa42118f
+      body: |
+        Update lint-staged from 17.1.1 to 17.2.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+  version: 0.10.27
+  title: ""
+  date: 2026-07-26T10:25:49.770Z
+- commits:
     - subject: Update dependency lint-staged to v17.1.1
       hash: b71039c0ad585f4914945574474dd5125079bedf
       body: |
