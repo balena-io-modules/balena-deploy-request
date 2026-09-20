@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependency prettier to v3.9.8
+      hash: b02edb63e0e95d8b59334beb4797dced5bc3dd1c
+      body: |
+        Update prettier from 3.9.7 to 3.9.8
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+  version: 0.10.34
+  title: ""
+  date: 2026-09-20T21:55:49.046Z
+- commits:
     - subject: Update dependency prettier to v3.9.7
       hash: 6961cf8fdefab5659c20183bda53ae520328170e
       body: |
