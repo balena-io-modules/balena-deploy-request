@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependency prettier to v3.9.10
+      hash: d4d0a208e40f47f8c59a289abbc7041b3fb9aa45
+      body: |
+        Update prettier from 3.9.9 to 3.9.10
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+  version: 0.10.37
+  title: ""
+  date: 2026-10-17T01:16:13.746Z
+- commits:
     - subject: Update dependency lint-staged to v17.6.0
       hash: 1d1d20a4dfde1dfd6550035be65807c548fa5fa2
       body: |
