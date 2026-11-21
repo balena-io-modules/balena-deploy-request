@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependency lint-staged to v17.6.1
+      hash: ebc286b6fac59010184f7e9acba6a565a24ba8b2
+      body: |
+        Update lint-staged from 17.6.0 to 17.6.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+  version: 0.10.39
+  title: ""
+  date: 2026-11-21T00:59:00.177Z
+- commits:
     - subject: Update dependency prettier to v3.10.1
       hash: 697defce4651d338c035c3570d123da0eda01f47
       body: |
